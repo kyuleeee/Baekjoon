@@ -17,27 +17,43 @@ K와 L이 주어졌을 때, 좋은 암호인지 판단하는 프로그램을 작
 출력
 좋은 암호인 경우에는 GOOD을 출력한다. 나쁜 암호일 경우에는 BAD를 출력하고, K의 가장 작은 (1 아닌) 인수를 출력한다.
 '''
-#1. K,L을 입력받는다 
-K,L = map(int,input().split())
+# #1. K,L을 입력받는다 
+# K,L = map(int,input().split())
 
-#2. K를 소인수분해한다. 
-prime_list = []
-def prime_factorization(n):
-    i = 2
-    while i <= n:
-        if n % i == 0:
-            n = n // i
-            prime_list.append(i) #이게 조금 헷갈렸었다. 
-        else:
-            i += 1
-    return prime_list
-  #이거 구현하는 거 조금 어려웠던 것 같다. 
+# #2. K를 소인수분해한다. 
+# prime_list = []
+# def prime_factorization(n):
+#     i = 2
+#     while i <= n:
+#         if n % i == 0:
+#             n = n // i
+#             prime_list.append(i) #이게 조금 헷갈렸었다. 
+#         else:
+#             i += 1
+#     return prime_list
+#   #이거 구현하는 거 조금 어려웠던 것 같다. 
   
   
 
-#3. 소인수분해한 수 > L이면 GOOD을 출력한다. 소인수분해한 수 < L이면 BAD를 출력하고, K의 가장 작은(1아닌) 인수를 출력한다.
-if max(prime_factorization(K)) >= L:
-    print('GOOD')
-else : 
-    print('BAD')
-    print(min(prime_list))
+# #3. 소인수분해한 수 > L이면 GOOD을 출력한다. 소인수분해한 수 < L이면 BAD를 출력하고, K의 가장 작은(1아닌) 인수를 출력한다.
+# if max(prime_factorization(K)) >= L:
+#     print('GOOD')
+# else : 
+#     print('BAD')
+#     print(min(prime_list))
+
+
+K, L = map(int, input().split())
+
+# L보다 작은 소인수를 찾으면 바로 종료
+def find_smallest_factor(K, L):
+    for i in range(2, L):  # 2부터 L-1까지 검사
+        if K % i == 0:  # 나누어떨어지면 BAD
+            print("BAD", i)
+            return
+    print("GOOD")
+
+find_smallest_factor(K, L)
+
+
+
