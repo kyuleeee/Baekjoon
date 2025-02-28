@@ -5,5 +5,3 @@
 N = int(input())
 print(N % 20000303)
 
-
-#else 이런 거 쓸려고 했는데 쩝 
