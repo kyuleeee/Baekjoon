@@ -34,7 +34,7 @@ for i in range(0,N):
       cur_cnt = 0
     else : 
       cur_cnt += 1
-    if cur_cnt > max_cnt : #이건 공통되게 적용되는 것! 
+    if cur_cnt > max_cnt : #이건 공통되게 적용되는 것! -> 이렇게 공통되게 적용되는 것이 중요. 
       max_cnt = cur_cnt
 print(max_cnt)
 
