@@ -94,6 +94,7 @@ graph = []
 for i in range(N):
     m = input().strip()  # 각 사람의 친구 관계
     graph.append([j for j in range(N) if m[j] == 'Y'])  # 친구인 사람들을 리스트에 추가
+    # graph = [[1, 2], [0, 2], [0, 1]] 이렇게 되는 거겠지.
 
 
 
