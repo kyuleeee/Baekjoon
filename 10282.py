@@ -73,6 +73,7 @@ for _ in range(N):
     # 감염된 컴퓨터 수와 최종 감염 시간 계산
     infected_count = sum(1 for d in distance if d < INF)
     max_time = max(d for d in distance if d < INF) #if가 필요함. 
+    #max(0,4,6) 이렇게 되어서 max인 6만 뽑히는 것임
 
     print(infected_count, max_time)
     
