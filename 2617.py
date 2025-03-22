@@ -61,7 +61,7 @@ def count_reachable(start, graph):
                 count += 1
     return count
 
-# 3. 무게를 기준으로 정렬했을 때, 가운데 있는 구슬의 위치가 mid번째
+# 3. 무게를 기준으로 정렬했을 때, 가운데 있는 구슬의 위치가 mid번째(홀수의 중앙)
 mid = (N + 1) // 2
 invalid_count = 0
 
